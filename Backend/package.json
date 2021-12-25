@@ -1,0 +1,25 @@
+{
+  "name": "Instaminutes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinkubangale/InstaChat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rinkubangale/InstaChat/issues"
+  },
+  "homepage": "https://github.com/rinkubangale/InstaChat#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nanoid": "^3.1.30",
+    "socket.io": "^4.4.0"
+  }
+}
