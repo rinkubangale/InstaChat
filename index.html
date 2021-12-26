@@ -35,11 +35,13 @@
     let myName;
     let textarea = document.querySelector("#textarea");
     let messageArea = document.querySelector(".chats");
-    
+
+    //Prompt To get Name of User
     do {
         myName = prompt("Please enter your name: ");
     } while (!myName);
 
+    //Enter key to send message
     textarea.addEventListener("keyup", (e) => {
         if (e.key === "Enter") {
             e.target.value !== "" && sendMessage(e.target.value);
@@ -51,6 +53,7 @@
             user: myName,
             message: message.trim(),
         };
+
         //Append
         appendMessage(msg, "outgoing");
         textarea.value = "";
@@ -66,8 +69,8 @@
         mainDiv.classList.add(className, "message");
 
         let markup = `
-    <h6>${msg.user}</h6>
-    <p>${msg.message}</p>
+        <p>${msg.message}</p>
+        <h6>${msg.user}</h6>
     `;
 
         mainDiv.innerHTML = markup;
@@ -75,7 +78,6 @@
     }
 
     //Receive
-
     socket.on("message", (payload) => {
         appendMessage(payload, "incoming");
         scrollToBottom();

@@ -11,17 +11,17 @@ http.listen(PORT, () => {
   console.log(`Listening to Port ${PORT}...`);
 });
 
-// console.log(process.env.PORT);
-
 app.use(express.static(__dirname + "/public"));
-console.log("server se h:", path.join(__dirname, "/index.html"), __dirname);
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/index.html"));
 });
 
+//socket connection
 io.on("connection", (socket) => {
   console.log("user connected: " + socket.id);
+  
+  //broadcasting users message to all others
   socket.on("message", (payload) => {
     socket.broadcast.emit("message", payload);
   });
