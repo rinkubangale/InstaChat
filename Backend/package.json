@@ -19,7 +19,6 @@
   "homepage": "https://github.com/rinkubangale/InstaChat#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "nanoid": "^3.1.30",
     "socket.io": "^4.4.0"
   }
 }

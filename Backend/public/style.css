@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 33%;
+    height: 95vh;
+    padding: 0px 20px;
+    border: 4px solid #fff;
+    background:#7900ff;
+    color: #fff;
+}
+
+.title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.title>h3{
+    margin-left: 10px;
+}
+
+.chatblock {
+    /* position: absolute;
+    top: 95px;
+    border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    overflow: auto;
+}
+.msgbox{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 0px 10px;
+    outline: none;
+    border: none;
+    background: rgba(127, 172, 255, 0.623);
+    color: #fff;
+}
+
+input::placeholder{
+    color: #fff;
+    font-weight:600;
+}
+
+.roomname{
+    border-bottom: 1px solid;
+    height: fit-content;
+    padding: 0px 10px;
+}
+
+.chats{
+    flex-grow: 2;
+    height: 100%;
+    padding: 10px;
+    overflow: auto;
+}
+
+.message {
+    padding: 10px 20px 0px 20px;
+    border-radius: 4px;
+    /* margin-bottom: 10px; */
+    max-width: 300px;
+    position: relative;
+}
+
+.incoming>p {
+    background: #e3f2fd;
+    color: #123123;
+    padding: 10px;
+    margin: 20px 0px 0px auto;
+    border-radius: 0px 10px 10px 10px;
+    overflow-wrap: anywhere;
+}
+
+.outgoing > p {
+    background: #90caf9;
+    padding: 10px;
+    margin: 20px 0px 0px auto;
+    border-radius: 0px 10px 10px 10px;
+    color: #123123;
+    overflow-wrap: anywhere;
+}
+
+.message h6 {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 14px;
+}
