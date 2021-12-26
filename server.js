@@ -14,7 +14,7 @@ http.listen(PORT, () => {
 // console.log(process.env.PORT);
 
 app.use(express.static(__dirname + "/public"));
-console.log("server se h:", path.join(__dirname, "/index.html"));
+console.log("server se h:", path.join(__dirname, "/index.html"), __dirname);
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/index.html"));
