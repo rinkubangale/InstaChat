@@ -1,5 +1,4 @@
 const socket = io();
-// socket.on("connection");
 
 let myName;
 let textarea = document.querySelector("#textarea");
