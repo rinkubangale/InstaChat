@@ -58,6 +58,7 @@
     //Click logout to clear name
     logout.addEventListener("click", () => {
         localStorage.clear();
+        window.location.reload();
     });
 
     function sendMessage(message) {
