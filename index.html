@@ -38,11 +38,12 @@
     let messageArea = document.querySelector(".chats");
     console.log("myName: "+myName);
     //Prompt To get Name of User
+   if(!myName){
     do {
         myName = prompt("Please enter your name: ");
         localStorage.setItem("myName", myName);
     } while (!myName);
-
+   }
     console.log("myName: "+myName);
 
     //Enter key to send message
