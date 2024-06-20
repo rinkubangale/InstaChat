@@ -33,14 +33,16 @@
   import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
     const socket = io();
 
-    let myName;
+    let myName = localStorage.getItem("myName");;
     let textarea = document.querySelector("#textarea");
     let messageArea = document.querySelector(".chats");
 
     //Prompt To get Name of User
     do {
         myName = prompt("Please enter your name: ");
+        localStorage.setItem("myName", myName);
     } while (!myName);
+
 
     //Enter key to send message
     textarea.addEventListener("keyup", (e) => {
