@@ -20,7 +20,7 @@
                 <h4>
                     Room
                 </h4>
-             <a onclick="logout()">Logout</a>
+             <a href="#" id="logout">Logout</a>
             </div>
             <div class="chats"></div>
             <div class="msgbox">
@@ -36,6 +36,7 @@
 
     let myName = localStorage.getItem("myName");;
     let textarea = document.querySelector("#textarea");
+    let logout = document.querySelector("#logout");
     let messageArea = document.querySelector(".chats");
     console.log("myName: "+myName);
     //Prompt To get Name of User
@@ -52,6 +53,11 @@
         if (e.key === "Enter") {
             e.target.value !== "" && sendMessage(e.target.value);
         }
+    });
+
+    //Click logout to clear name
+    logout.addEventListener("click", () => {
+        localStorage.clear();
     });
 
     function sendMessage(message) {
@@ -93,10 +99,6 @@
         messageArea.scrollTop = messageArea.scrollHeight;
     }
 
-  //logout user
-  const logout = () => {
-    localStorage.clear();
-  }
 </script>
 
 </html>
