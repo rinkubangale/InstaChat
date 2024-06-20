@@ -36,13 +36,14 @@
     let myName = localStorage.getItem("myName");;
     let textarea = document.querySelector("#textarea");
     let messageArea = document.querySelector(".chats");
-
+    console.log("myName: "+myName);
     //Prompt To get Name of User
     do {
         myName = prompt("Please enter your name: ");
         localStorage.setItem("myName", myName);
     } while (!myName);
 
+    console.log("myName: "+myName);
 
     //Enter key to send message
     textarea.addEventListener("keyup", (e) => {
