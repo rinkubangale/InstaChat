@@ -20,6 +20,7 @@
                 <h4>
                     Room
                 </h4>
+             <a onclick="logout()">Logout</a>
             </div>
             <div class="chats"></div>
             <div class="msgbox">
@@ -91,6 +92,11 @@
     function scrollToBottom() {
         messageArea.scrollTop = messageArea.scrollHeight;
     }
+
+  //logout user
+  const logout = () => {
+    localStorage.clear();
+  }
 </script>
 
 </html>
