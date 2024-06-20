@@ -1,20 +1,20 @@
 const express = require("express");
 const app = express();
-const http = require("http").createServer(app);
-const path = require("path");
+// const http = require("http").createServer(app);
+// const path = require("path");
 
 const PORT = process.env.PORT || 3000;
 
 const io = require("socket.io")(http, { cors: { origin: "*" } });
 
-http.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Listening to Port ${PORT}...`);
 });
 
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/index.html"));
+  res.send("index"));
 });
 
 //socket connection
