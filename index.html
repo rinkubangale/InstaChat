@@ -29,7 +29,8 @@
     </div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
-<script>
+ <script type="module">
+  import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
     const socket = io();
 
     let myName;
