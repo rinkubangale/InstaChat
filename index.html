@@ -45,9 +45,9 @@
         console.log("do myName: "+myName);
         myName = prompt("Please enter your name: ");
         localStorage.setItem("myName", myName);
-    } while (myName);
+    } while (!myName);
    }
-    console.log("myName: "+myName);
+    console.log("after do myName: "+myName);
 
     //Enter key to send message
     textarea.addEventListener("keyup", (e) => {
