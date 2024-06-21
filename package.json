@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/rinkubangale/InstaChat#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.17.2",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7",
     "socket.io": "^4.4.0"
   }
 }
