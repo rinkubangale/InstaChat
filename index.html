@@ -40,11 +40,11 @@
     let messageArea = document.querySelector(".chats");
     console.log("myName: "+myName);
     //Prompt To get Name of User
-   if(!myName){
+   if(myName == null || myName == undefined || myName == ''){
     do {
         myName = prompt("Please enter your name: ");
         localStorage.setItem("myName", myName);
-    } while (!myName);
+    } while (myName);
    }
     console.log("myName: "+myName);
 
