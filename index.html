@@ -93,6 +93,7 @@
 
     //Receive
     socket.on("message", (payload) => {
+        console.log("users text: "+payload);
         appendMessage(payload, "incoming");
         scrollToBottom();
     });

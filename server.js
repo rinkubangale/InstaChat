@@ -14,7 +14,7 @@ http.listen(PORT, () => {
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile("./index.html", { root: __dirname });
 });
 
 //socket connection
@@ -23,6 +23,7 @@ io.on("connection", (socket) => {
 
   //broadcasting users message to all others
   socket.on("message", (payload) => {
+    console.log("user msg: " + JSON.stringify(payload));
     socket.broadcast.emit("message", payload);
   });
 });
